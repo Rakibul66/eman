@@ -1,8 +1,9 @@
 import 'package:eman/player_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'home_screen.dart';
+import 'view/home/home_screen.dart';
 
 
 void main() {
@@ -19,11 +20,11 @@ class IslamicApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
+        return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          title: "Islamic App",
+          title: "ইসলামিক অ্যাপ",
           theme: ThemeData(
-            textTheme: GoogleFonts.poppinsTextTheme(),
+            textTheme: GoogleFonts.notoSansBengaliTextTheme(),
             primaryColor: Colors.green.shade800,
           ),
           home: const MainScreen(),
@@ -46,7 +47,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _screens = [
     const HomeScreen(),
-     PrayerScreen(),
+     PrayerScreen(), // ✅ Ensure correct instance creation
   ];
 
   @override
@@ -65,14 +66,14 @@ class _MainScreenState extends State<MainScreen> {
             _selectedIndex = index;
           });
         },
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
+            icon: Icon(Icons.home, size: 24.sp),
+            label: "হোম", // Bangla Text
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.access_time),
-            label: "Prayer Time",
+            icon: Icon(Icons.access_time, size: 24.sp),
+            label: "নামাজের সময়", // Bangla Text
           ),
         ],
       ),
