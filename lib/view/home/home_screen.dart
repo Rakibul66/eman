@@ -1,6 +1,7 @@
 import 'package:eman/view/nintyname/ninty_name_screen.dart';
 import 'package:eman/view/ramdan/ramadan_wishes_screen.dart';
 import 'package:eman/view/ramdan/ramdan_dua_screen.dart';
+import 'package:eman/view/tasbee/tasbee_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -192,8 +193,8 @@ final List<Map<String, dynamic>> features = [
     "onTap": () => Get.to(() => AllahNamesScreen()),
   },
   {
-    "title": "কিবলা দিক",
+    "title": "Tasbee",
     "icon": Icons.compass_calibration,
-    "onTap": () => Get.to(() => AllahNamesScreen()),
+    "onTap": () => Get.to(() => TasbeehScreen()),
   },
 ];
